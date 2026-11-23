@@ -73,6 +73,7 @@ jobs:
       with:
         name: libideviceactivation-latest_${{env.target_triplet}}
         path: libideviceactivation.tar
+        retention-days: 3
   build-macOS:
     runs-on: macOS-latest
     steps:
@@ -156,6 +157,7 @@ jobs:
       with:
         name: libideviceactivation-latest_macOS
         path: libideviceactivation.tar
+        retention-days: 3
   build-windows:
     runs-on: windows-latest
     defaults:
@@ -251,3 +253,4 @@ jobs:
       with:
         name: libideviceactivation-latest_${{ matrix.arch }}-${{ env.dest }}
         path: libideviceactivation.tar
+        retention-days: 3
